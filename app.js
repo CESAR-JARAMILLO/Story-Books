@@ -20,6 +20,9 @@ if (process.env.NODE_ENV === 'development') {
 app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
 app.set('view engine', '.hbs')
 
+// Routes
+app.use('/', require('./routes/index'))
+
 // process.env lets you use variables that are in the config.env file
 const PORT = process.env.PORT || 5000
 
