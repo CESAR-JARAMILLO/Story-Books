@@ -42,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Routes
 app.use('/', require('./routes/index'))
+app.use('/auth', require('./routes/auth'))
 
 // process.env lets you use variables that are in the config.env file
 const PORT = process.env.PORT || 5000
